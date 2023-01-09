@@ -4,8 +4,7 @@ import logger from "morgan";
 import createError from "http-errors";
 import cookieParser from "cookie-parser";
 
-dotenv.config();
-const port = process.env.PORT;
+import catwikiRouter from "./routes/catwiki.route";
 
 const app = express();
 app.use(logger("dev"));
@@ -17,6 +16,7 @@ app.use(cookieParser());
 app.get("/check", (req: Request, res: Response) => {
 	res.status(200).json({ success: true, message: "Serve is up and running" });
 });
+app.use("/api/v1", catwikiRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req: Request, res: Response, next: NextFunction) {
@@ -32,12 +32,8 @@ app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
 	// render the error page
 	// res.status(err.status || 500);
 	res.status(err.status || 500);
-	res.json({ success: false, error: err.message });
+	res.json({ success: false, message: err.message });
 });
 
-// Start the server
-app.listen(port, async () => {
-	console.log(
-		`Listening on ${port}, App is running at http://localhost:${port}`
-	);
-});
+
+export default app;
