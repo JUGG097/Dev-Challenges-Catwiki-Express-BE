@@ -1,5 +1,3 @@
-import { CatDetailsData, CatImageData, BreedListData, breedApiDataType } from "./types";
-
 export const extractCatDetails = (objSubArr: any) => {
 	return {
 		id: objSubArr.id,
@@ -21,7 +19,7 @@ export const extractCatDetails = (objSubArr: any) => {
 	};
 };
 
-export const extractBreedDetails= (objSubArr: BreedListData) => {
+export const extractBreedDetails= (objSubArr: any) => {
     return {
         id: objSubArr.id,
         name: objSubArr.name,
