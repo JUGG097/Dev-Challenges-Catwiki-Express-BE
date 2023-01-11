@@ -6,7 +6,7 @@ export const getBreeds = async (fetchKey: string, catId: null | string) => {
 	try {
 		if (fetchKey === "topTen") {
 			const resp = await fetch(
-				"https://api.thecataapi.com/v1/breeds?limit=10&page=0",
+				"https://api.thecatapi.com/v1/breeds?limit=10&page=0",
 				{
 					method: "GET",
 					headers: {
