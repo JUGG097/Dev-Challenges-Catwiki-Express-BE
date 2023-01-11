@@ -1,5 +1,4 @@
 import express, { Request, Response, NextFunction } from "express";
-import dotenv from "dotenv";
 import logger from "morgan";
 import createError from "http-errors";
 import cookieParser from "cookie-parser";
