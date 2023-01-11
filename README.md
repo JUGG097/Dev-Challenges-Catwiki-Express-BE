@@ -1,9 +1,45 @@
-# My-Express-TypeScript-Template
+# Catwiki Express Backend Project (The backend for the Catwiki Website deployed [here](https://catwiki-adeoluwa.netlify.app/))
 
-### A self made template for writing minimalistic Nodejs backend code with Express.
+This project was developed using `Node` v "^18.13.0", `Express` v "^4.18.1", `Typescript` v "^4.7.2" and `Jest` v "^29.3.1" libraries.
 
-### To run the code in development `npm install` to install dependencies, then simply run `npm run dev` in the terminal.
+The Catwiki Website was deployed with `Netlify` link [here](https://catwiki-adeoluwa.netlify.app/).
 
-### To create get it compiled down to JS simply run `npx tsc` in the terminal, compile it into a `dist` folder as outlined in the `tsconfig.json` file. 
+Figma design was provided by [devChallenges.io](https://devchallenges.io/).
 
-## Feel free to clone repo and improve on it.
+You can clone project and customise at your end.
+
+### API Documentation
+
+- 'http://127.0.0.1:4000/api/v1/topTen' Endpoint
+
+METHOD: 'GET'
+
+SUCCESS RESPONSE (200): {'success': true, 'data': '**********'}
+
+ERROR RESPONSE (4**, 5**): {'success': false, 'message': '***********'}
+
+
+- 'http://127.0.0.1:4000/api/v1/details/{cat_id}' Endpoint
+
+METHOD: 'GET'
+
+SUCCESS RESPONSE (200): {'success': true, 'data': '**********'}
+
+ERROR RESPONSE (4**, 5**): {'success': false, 'message': '***********'}
+
+
+- 'http://127.0.0.1:4000/api/v1/photos/{cat_id}' Endpoint
+
+METHOD: 'GET'
+
+SUCCESS RESPONSE (200): {'success': true, 'data': '**********'}
+
+ERROR RESPONSE (4**, 5**): {'success': false, 'message': '***********'}
+
+- 'http://127.0.0.1:4000/api/v1/breedlist' Endpoint
+
+METHOD: 'GET'
+
+SUCCESS RESPONSE (200): {'success': true, 'data': '**********'}
+
+ERROR RESPONSE (4**, 5**): {'success': false, 'message': '***********'}

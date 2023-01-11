@@ -1,10 +1,12 @@
+import createError from "http-errors";
+
 const api_key = process.env.API_KEY || "";
 
 export const getBreeds = async (fetchKey: string, catId: null | string) => {
 	try {
 		if (fetchKey === "topTen") {
 			const resp = await fetch(
-				"https://api.thecatapi.com/v1/breeds?limit=10&page=0",
+				"https://api.thecataapi.com/v1/breeds?limit=10&page=0",
 				{
 					method: "GET",
 					headers: {
@@ -34,7 +36,8 @@ export const getBreeds = async (fetchKey: string, catId: null | string) => {
 			return resp;
 		}
 	} catch (error) {
-		throw new Error("3rd Party API Error: " + error);
+		// throw new Error("3rd Party API Error: " + error);
+		throw createError(503, "3rd Party API Error: " + error);
 	}
 };
 
@@ -59,6 +62,7 @@ export const getCatImages = async (
 
 		return resp;
 	} catch (error) {
-		throw new Error("3rd Party API Error: " + error);
+		// throw new Error("3rd Party API Error: " + error);
+		throw createError(503, "3rd Party API Error: " + error);
 	}
 };

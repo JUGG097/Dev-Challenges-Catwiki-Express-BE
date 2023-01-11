@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from "express";
-import { omit } from "lodash";
 import { getCatImages, getBreeds } from "../services/catwiki.service";
 import { extractBreedDetails, extractCatDetails } from "../utils/helper_func";
 import { CatDetailsData, CatImageData, BreedListData } from "../utils/types";
